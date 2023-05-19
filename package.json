@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|css|ts|tsx)\"",
+    "format": "npm run prettier -- --list-different",
+    "format:write": "npm run prettier -- --write"
   },
   "dependencies": {
     "@types/node": "20.2.1",
@@ -26,5 +29,9 @@
     "node": ">=18.16",
     "yarn": "please-use-pnpm",
     "pnpm": ">=8.5"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0"
   }
 }
