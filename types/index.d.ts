@@ -1,3 +1,3 @@
 export type Foo = {
-  title: string;
-};
+  title: string
+}
