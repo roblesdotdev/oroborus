@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|css|ts|tsx)\"",
     "format": "npm run prettier -- --list-different",
-    "format:write": "npm run prettier -- --write"
+    "format:write": "npm run prettier -- --write",
+    "typecheck": "tsc -b",
+    "validate": "run-s typecheck lint"
   },
   "dependencies": {
     "@types/node": "20.2.1",
@@ -34,6 +37,8 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-tailwindcss": "^3.12.0",
+    "husky": "^8.0.3",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0"
   }
