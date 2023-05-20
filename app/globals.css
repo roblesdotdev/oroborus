@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --canvas-default: #121416;
-  --canvas-primary: #252b32;
-  --fg-default: #fefefe;
-  --fg-muted: #91979e;
+@layer base {
+  :root {
+    --canvas-default: 18 20 22;
+    --canvas-primary: 37 43 50;
+    --fg-default: 253 253 253;
+    --fg-muted: 145 151 158;
 
-  color-scheme: dark light;
+    color-scheme: dark light;
+  }
 }
