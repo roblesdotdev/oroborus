@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { siteConfig } from '~/config/site'
+import Button from '../shared/ui/button'
 
 export default function Navbar() {
   return (
@@ -14,8 +15,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="ml-auto flex items-center gap-2">
-            <button>Login</button>
-            <button>Sign Up</button>
+            <Button size="sm" href="/login">
+              Login
+            </Button>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,6 @@
 import { Balancer } from 'react-wrap-balancer'
 import { ArrowRight, GithubIcon } from '~/components/shared/icons'
+import Button from '~/components/shared/ui/button'
 import { siteConfig } from '~/config/site'
 
 export default function Home() {
@@ -31,9 +32,11 @@ export default function Home() {
               applications quickly and efficiently.
             </Balancer>
           </p>
-          <button className="rounded-md border-2 border-canvas-primary px-6 py-3 transition hover:bg-canvas-primary">
-            Explore
-          </button>
+          <Button variant="outline">
+            <div className="flex items-center gap-2">
+              <span>Explore</span>
+            </div>
+          </Button>
         </section>
       </div>
     </div>
