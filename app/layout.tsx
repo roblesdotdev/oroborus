@@ -4,15 +4,18 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Abyssal',
-  description: 'Next.js 13 Template',
+  title: {
+    default: 'Abyssal',
+    template: '%s | Abyssal',
+  },
+  description: 'Next.js 13 Template by Aldo R. Robles',
 }
 
-export default function RootLayout({
-  children,
-}: {
+type RootLayoutProps = {
   children: React.ReactNode
-}) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
