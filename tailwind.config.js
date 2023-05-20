@@ -9,12 +9,12 @@ module.exports = {
     extend: {
       colors: {
         canvas: {
-          DEFAULT: 'var(--canvas-default)',
-          primary: 'var(--canvas-primary)',
+          DEFAULT: 'rgb(var(--canvas-default) / <alpha-value>)',
+          primary: 'rgb(var(--canvas-primary) / <alpha-value>)',
         },
         fg: {
-          DEFAULT: 'var(--fg-default)',
-          muted: 'var(--fg-muted)',
+          DEFAULT: 'rgb(var(--fg-default) / <alpha-value>)',
+          muted: 'rgb(var(--fg-muted) / <alpha-value>)',
         },
       },
     },
