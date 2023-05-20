@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 :root {
+  --canvas-default: #121416;
+  --canvas-primary: #252b32;
+  --fg-default: #fefefe;
+  --fg-muted: #91979e;
+
   color-scheme: dark light;
 }

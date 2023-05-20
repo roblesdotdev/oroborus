@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { siteConfig } from '~/config/site'
 
 export default function Navbar() {
   return (
@@ -8,7 +9,7 @@ export default function Navbar() {
           <li>
             <Link href="/">
               <div className="flex items-center gap-2">
-                <h1 className="text-base font-medium">Abyssal</h1>
+                <h1 className="text-base font-medium">{siteConfig.name}</h1>
               </div>
             </Link>
           </li>

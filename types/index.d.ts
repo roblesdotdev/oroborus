@@ -1,3 +1,5 @@
-export type Foo = {
-  title: string
+export type SiteConfig = {
+  name: string
+  url: string
+  repoUrl: string
 }

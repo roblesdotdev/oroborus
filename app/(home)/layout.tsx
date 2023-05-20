@@ -11,9 +11,9 @@ type HomeLayoutProps = {
 
 export default function HomeLayout({ children }: HomeLayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col text-gray-100">
+    <div className="flex min-h-screen flex-col">
       <Navbar />
-      <main className="flex-1 text-gray-200">{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
   )
