@@ -11,6 +11,7 @@ const buttonStyles = cva(
         default: 'bg-canvas-primary hover:opacity-90',
         outline:
           'ring-2 ring-inset ring-canvas-primary hover:bg-canvas-primary',
+        link: 'underline underline-offset-4 hover:text-fg',
       },
       fullWidth: {
         true: 'w-full',
@@ -18,6 +19,7 @@ const buttonStyles = cva(
       size: {
         default: 'px-6 py-3 text-base',
         sm: 'px-4 py-2 text-xs',
+        sm0: 'p-0 text-xs',
       },
     },
     defaultVariants: {

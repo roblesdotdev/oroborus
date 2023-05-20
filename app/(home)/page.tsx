@@ -1,5 +1,5 @@
 import { Balancer } from 'react-wrap-balancer'
-import { ArrowRight, GithubIcon } from '~/components/shared/icons'
+import { ArrowRightIcon, GithubIcon } from '~/components/shared/icons'
 import Button from '~/components/shared/ui/button'
 import { siteConfig } from '~/config/site'
 
@@ -19,7 +19,7 @@ export default function Home() {
               Star on Github <b>1k</b>
             </span>
             <span className="ml-2 flex items-center justify-center rounded-full bg-white/10 p-1">
-              <ArrowRight className="h-3 w-3" />
+              <ArrowRightIcon className="h-3 w-3" />
             </span>
           </a>
           <h1 className="mb-4 mt-6 max-w-3xl text-center text-4xl font-medium delay-[0.15s] md:text-7xl">

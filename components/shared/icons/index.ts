@@ -1,2 +1,3 @@
 export { default as GithubIcon } from './github'
-export { default as ArrowRight } from './arrow-right'
+export { default as ArrowRightIcon } from './arrow-right'
+export { default as ChevronLeftIcon } from './chevron-left'
