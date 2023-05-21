@@ -32,7 +32,7 @@ export default function Home() {
               applications quickly and efficiently.
             </Balancer>
           </p>
-          <Button variant="outline">
+          <Button href="/dashboard" variant="outline">
             <div className="flex items-center gap-2">
               <span>Explore</span>
             </div>
