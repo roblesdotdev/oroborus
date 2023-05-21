@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { siteConfig } from '~/config/site'
-import Button from '../shared/ui/button'
+import NavAuth from '../nav-auth'
 
 export default function Navbar() {
   return (
@@ -15,9 +15,8 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="ml-auto flex items-center gap-2">
-            <Button size="sm" href="/login">
-              Login
-            </Button>
+            {/* @ts-expect-error server side components */}
+            <NavAuth />
           </li>
         </ul>
       </nav>
