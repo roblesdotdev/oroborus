@@ -1,6 +1,7 @@
 import { Balancer } from 'react-wrap-balancer'
 import { ArrowRightIcon, GithubIcon } from '~/components/shared/icons'
 import Button from '~/components/shared/ui/button'
+import { siteFeatures } from '~/config/features'
 import { siteConfig } from '~/config/site'
 
 export default function Home() {
@@ -37,6 +38,30 @@ export default function Home() {
               <span>Explore</span>
             </div>
           </Button>
+        </section>
+
+        <section className="pb-16 md:mt-32">
+          <p className="mx-auto text-center md:mb-16 md:max-w-xl md:text-lg lg:text-xl">
+            The purpose of this project is to explore and leverage the new
+            features of{' '}
+            <span className="font-medium text-gray-200">Next.js 13</span> with
+            app dir.
+          </p>
+          <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+          <div className="mx-auto grid max-w-5xl grid-cols-2 justify-center gap-x-4 gap-y-9 text-fg-muted md:grid-cols-3 md:place-items-center">
+            {siteFeatures.map(feat => (
+              <div
+                key={feat.title}
+                className="flex flex-col gap-2 md:max-w-xs lg:p-4"
+              >
+                {feat.icon}
+                <h4 className="line-clamp-2 text-sm md:text-lg">
+                  <span className="font-medium text-fg">{feat.title}</span>{' '}
+                  {feat.description}
+                </h4>
+              </div>
+            ))}
+          </div>
         </section>
       </div>
     </div>
