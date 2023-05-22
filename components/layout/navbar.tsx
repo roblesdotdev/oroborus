@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { siteConfig } from '~/config/site'
 import NavAuth from '../nav-auth'
+import Image from 'next/image'
 
 export default function Navbar() {
   return (
@@ -10,6 +11,12 @@ export default function Navbar() {
           <li>
             <Link href="/">
               <div className="flex items-center gap-2">
+                <Image
+                  src="/logo.png"
+                  alt="Brand logo"
+                  width={30}
+                  height={30}
+                />
                 <h1 className="text-base font-medium">{siteConfig.name}</h1>
               </div>
             </Link>
