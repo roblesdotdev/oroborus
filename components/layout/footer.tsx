@@ -2,7 +2,7 @@ import { siteConfig } from '~/config/site'
 
 export default function Footer() {
   return (
-    <footer className="mt-32 py-8">
+    <footer className="mt-32 border-t border-canvas-primary py-8">
       <p className="text-center text-sm text-fg-muted">
         {siteConfig.name} by{' '}
         <a
