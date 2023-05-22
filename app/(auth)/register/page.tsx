@@ -2,6 +2,10 @@ import { Balancer } from 'react-wrap-balancer'
 import Button from '~/components/shared/ui/button'
 import UserAuthForm from '~/components/user-auth-form'
 
+export const metadata = {
+  title: 'Register',
+}
+
 export default function RegisterPage() {
   return (
     <>

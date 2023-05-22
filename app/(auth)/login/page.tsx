@@ -3,6 +3,10 @@ import { ChevronLeftIcon } from '~/components/shared/icons'
 import Button from '~/components/shared/ui/button'
 import UserAuthForm from '~/components/user-auth-form'
 
+export const metadata = {
+  title: 'Login',
+}
+
 export default function LoginPage() {
   return (
     <>
