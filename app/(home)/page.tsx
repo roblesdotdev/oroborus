@@ -11,9 +11,11 @@ import {
   ShieldIcon,
   TailwindIcon,
   TypescriptIcon,
+  VercelIcon,
 } from '~/components/shared/icons'
 import Button from '~/components/shared/ui/button'
 import { siteConfig } from '~/config/site'
+import { VERCEL_DEPLOY_URL } from '~/lib/constants'
 
 export default function Home() {
   return (
@@ -27,9 +29,7 @@ export default function Home() {
             className="flex h-7 items-center gap-2 whitespace-nowrap rounded-full bg-canvas-primary px-6 text-[13px] hover:opacity-90"
           >
             <GithubIcon className="h-4 w-4" />
-            <span>
-              Star on Github <b>1k</b>
-            </span>
+            <span>Star on Github</span>
             <span className="ml-2 flex items-center justify-center rounded-full bg-white/10 p-1">
               <ArrowRightIcon className="h-3 w-3" />
             </span>
@@ -46,13 +46,13 @@ export default function Home() {
           </p>
           <Button href="/dashboard" variant="outline">
             <div className="flex items-center gap-2">
-              <span>Explore</span>
+              <span>Get Started</span>
             </div>
           </Button>
         </section>
 
         <section className="pb-16 md:mt-32">
-          <p className="mx-auto text-center md:mb-16 md:max-w-xl md:text-lg lg:text-xl">
+          <p className="mx-auto text-center text-fg/90 md:mb-16 md:max-w-xl md:text-lg lg:text-xl">
             The purpose of this project is to explore and leverage the new
             features of{' '}
             <span className="font-medium text-gray-200">Next.js 13</span> with
@@ -66,12 +66,38 @@ export default function Home() {
                 className="flex flex-col gap-2 md:max-w-xs lg:p-4"
               >
                 {feat.icon}
-                <h4 className="line-clamp-2 text-sm md:text-lg">
+                <h2 className="line-clamp-2 text-sm md:text-lg">
                   <span className="font-medium text-fg">{feat.title}</span>{' '}
                   {feat.description}
-                </h4>
+                </h2>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-16 pb-8 md:mt-32">
+          <p className="mx-auto text-center text-fg/90 md:max-w-xl md:text-lg lg:mb-8 lg:text-xl">
+            The code can be found on{' '}
+            <a
+              className="font-medium hover:underline"
+              href={siteConfig.repoUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              github
+            </a>
+            , or you can deploy your own instance on Vercel with just one click.
+          </p>
+          <div className="flex items-center justify-center pt-8 lg:pt-0">
+            <a
+              className="flex items-center justify-center gap-2 rounded-md px-6 py-3 font-medium outline-none ring-2 ring-inset ring-canvas-primary transition hover:bg-canvas-primary focus:ring-2 focus:ring-fg-muted focus:ring-offset-2 focus:ring-offset-canvas disabled:pointer-events-none disabled:opacity-60"
+              href={VERCEL_DEPLOY_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <VercelIcon className="h-4 w-4" />
+              <span>Deploy to vercel</span>
+            </a>
           </div>
         </section>
       </div>
